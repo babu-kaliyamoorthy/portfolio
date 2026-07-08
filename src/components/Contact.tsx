@@ -63,7 +63,13 @@ export default function Contact() {
               );
 
               return href ? (
-                <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel="noreferrer"
+                  className="block"
+                >
                   {content}
                 </a>
               ) : (
