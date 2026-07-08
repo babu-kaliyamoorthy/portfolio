@@ -6,9 +6,9 @@ import { AndroidIcon, ComposeIcon, HiltIcon, KotlinIcon, MvvmIcon } from '@/comp
 const badges = [
   { Icon: KotlinIcon, label: 'Kotlin', className: '-left-6 top-10 sm:-left-10', delay: 0, anim: 'animate-float' },
   { Icon: ComposeIcon, label: 'Compose', className: '-right-4 top-4 sm:-right-8', delay: 0.4, anim: 'animate-float-delayed' },
-  { Icon: AndroidIcon, label: 'Android', className: '-left-10 bottom-24 sm:-left-14', delay: 0.8, anim: 'animate-float-slow' },
-  { Icon: HiltIcon, label: 'Hilt', className: '-right-8 bottom-32 sm:-right-12', delay: 1.2, anim: 'animate-float' },
-  { Icon: MvvmIcon, label: 'MVVM', className: 'left-1/2 -bottom-6 -translate-x-1/2', delay: 1.6, anim: 'animate-float-delayed' },
+  { Icon: AndroidIcon, label: 'Android', className: 'left-0 bottom-24 sm:-left-14', delay: 0.8, anim: 'animate-float-slow' },
+  { Icon: HiltIcon, label: 'Hilt', className: 'right-0 bottom-32 sm:-right-12', delay: 1.2, anim: 'animate-float' },
+  { Icon: MvvmIcon, label: 'MVVM', className: 'left-1/2 bottom-0 -translate-x-1/2 sm:-bottom-6', delay: 1.6, anim: 'animate-float-delayed' },
 ];
 
 export default function HeroIllustration() {
