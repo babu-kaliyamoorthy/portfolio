@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import BackToTop from '@/components/BackToTop';
 import { personal } from '@/data/resume';
+import { withBasePath } from '@/lib/utils';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
-const siteUrl = 'https://babukaliyamoorthy.github.io';
+const siteUrl = 'https://babu-kaliyamoorthy.github.io/portfolio';
 const title = `${personal.name} — Senior Android Engineer`;
 const description = `${personal.tagline} ${personal.experienceLabel} in Kotlin, Jetpack Compose, MVVM and Clean Architecture across Banking and FinTech.`;
 
@@ -56,12 +57,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: withBasePath('/favicon.svg'), type: 'image/svg+xml' },
+      { url: withBasePath('/favicon.ico'), sizes: 'any' },
     ],
-    apple: '/apple-touch-icon.png',
+    apple: withBasePath('/apple-touch-icon.png'),
   },
-  manifest: '/site.webmanifest',
+  manifest: withBasePath('/site.webmanifest'),
   openGraph: {
     type: 'website',
     url: siteUrl,

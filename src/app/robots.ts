@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://babukaliyamoorthy.github.io/sitemap.xml',
+    sitemap: 'https://babu-kaliyamoorthy.github.io/portfolio/sitemap.xml',
   };
 }

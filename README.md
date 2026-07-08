@@ -86,7 +86,7 @@ The workflow will build the site (`next build` with `output: 'export'`) and depl
 
 ### Updating SEO URLs
 
-The canonical URL, sitemap and JSON-LD in [`src/app/layout.tsx`](src/app/layout.tsx), [`src/app/sitemap.ts`](src/app/sitemap.ts) and [`src/app/robots.ts`](src/app/robots.ts) are set to `https://babukaliyamoorthy.github.io`. Update this constant/URL in all three files to match your actual GitHub Pages (or custom domain) URL after deploying.
+The canonical URL, sitemap and JSON-LD in [`src/app/layout.tsx`](src/app/layout.tsx), [`src/app/sitemap.ts`](src/app/sitemap.ts) and [`src/app/robots.ts`](src/app/robots.ts) are set to `https://babu-kaliyamoorthy.github.io/portfolio`. Update this constant/URL in all three files to match your actual GitHub Pages (or custom domain) URL if it ever changes.
 
 ## Building Locally
 
