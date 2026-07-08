@@ -24,7 +24,7 @@ export default function Experience() {
               return (
                 <div
                   key={`${entry.company}-${entry.role}`}
-                  className={`relative flex flex-col gap-6 sm:flex-row sm:items-start ${
+                  className={`relative flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-x-16 ${
                     isEven ? 'sm:flex-row' : 'sm:flex-row-reverse'
                   }`}
                 >
