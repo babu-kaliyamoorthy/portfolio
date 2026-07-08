@@ -6,6 +6,7 @@ import TypingAnimation from '@/components/TypingAnimation';
 import HeroIllustration from '@/components/HeroIllustration';
 import ParticlesBackground from '@/components/ParticlesBackground';
 import { personal } from '@/data/resume';
+import { withBasePath } from '@/lib/utils';
 
 const container = {
   hidden: {},
@@ -56,8 +57,8 @@ export default function Hero() {
 
           <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-4">
             <a
-              href={personal.resumeFile}
-              download
+              href={withBasePath(personal.resumeFile)}
+              download="Babu_Kaliyamoorthy_Resume.pdf"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-glow transition-transform hover:scale-[1.03] active:scale-95"
             >
               <Download className="h-4 w-4 transition-transform group-hover:-translate-y-0.5" />
