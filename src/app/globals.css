@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: 5 8 22; /* #050816 */
+  --color-surface: 13 18 38; /* elevated card surface */
+  --color-foreground: 255 255 255;
+}
+
+.light {
+  --color-background: 248 250 255;
+  --color-surface: 255 255 255;
+  --color-foreground: 5 8 22;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 96px;
+}
+
+body {
+  background-color: rgb(var(--color-background));
+  color-scheme: dark;
+}
+
+.light body {
+  color-scheme: light;
+}
+
+::selection {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#2563eb, #3b82f6);
+  border-radius: 999px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+  }
+
+  .card-surface {
+    @apply border border-foreground/10 bg-surface/60 backdrop-blur-xl;
+  }
+
+  .glass-panel {
+    @apply border border-foreground/10 bg-foreground/[0.03] backdrop-blur-2xl;
+  }
+
+  .section-padding {
+    @apply px-6 py-24 sm:px-10 lg:px-16 lg:py-32;
+  }
+
+  .container-narrow {
+    @apply mx-auto w-full max-w-6xl;
+  }
+
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-foreground;
+  }
+
+  p {
+    @apply text-foreground/70;
+  }
+}
