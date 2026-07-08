@@ -19,7 +19,7 @@ A premium, production-ready portfolio website for a Senior Android Engineer, bui
 - Dark/light theme toggle (dark by default, matching the brand palette)
 - SEO: metadata, Open Graph/Twitter cards, JSON-LD structured data, `sitemap.xml`, `robots.txt`
 - Generated favicon, apple-touch-icon, PWA icons and Open Graph image
-- A generated one-page resume PDF (`public/resume.pdf`) wired to the "Download Resume" button
+- Resume PDF (`public/resume.pdf`) wired to the "Download Resume" button
 - Fully responsive, keyboard accessible, and built for a 95+ Lighthouse score
 
 ## Getting Started
@@ -47,7 +47,7 @@ To update content (experience, skills, stats, etc.), edit [`src/data/resume.ts`]
 
 ## Updating Your Resume PDF
 
-`public/resume.pdf` is a generated placeholder built from the content in `src/data/resume.ts`. Replace it with your real resume file (keep the filename `resume.pdf`, or update `personal.resumeFile` in `src/data/resume.ts`) whenever you want the "Download Resume" button to serve a different file.
+`public/resume.pdf` is served directly by the "Download Resume" button. Replace this file (keep the filename `resume.pdf`, or update `personal.resumeFile` in `src/data/resume.ts`) whenever you want to update your resume.
 
 ## Contact Form
 

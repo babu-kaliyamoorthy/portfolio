@@ -6,8 +6,9 @@ export const personal = {
     'Building secure, scalable and high-performance Android applications for Banking, FinTech and Enterprise products.',
   location: 'Dubai, UAE',
   email: 'babukb12@gmail.com',
-  linkedin: 'https://linkedin.com/in/babukaliyamoorthy',
-  github: 'https://github.com/babukb',
+  phone: '+971 553181568',
+  linkedin: 'https://www.linkedin.com/in/babu-kaliyamoorthy/',
+  github: 'https://github.com/babu-kaliyamoorthy',
   resumeFile: '/resume.pdf',
   roles: ['Senior Android Engineer', 'Kotlin Developer', 'Jetpack Compose Specialist', 'Android Architect'],
 };
@@ -69,10 +70,11 @@ export type ExperienceEntry = {
 export const experience: ExperienceEntry[] = [
   {
     role: 'Senior Software Engineer',
-    company: 'Emirates NBD',
+    company: 'Emirates NBD (via Servion Global Solutions)',
     location: 'Dubai',
-    period: '2022 - Present',
+    period: 'Sep 2022 - Present',
     highlights: [
+      'Developed critical modules in the ENBD X digital banking application serving a large customer base across UAE.',
       'Delivered Credit Card Application Flow.',
       'Delivered Credit Limit Increase Flow.',
       'Improved Crash Free Users from 95% to 98%.',
@@ -86,8 +88,10 @@ export const experience: ExperienceEntry[] = [
   },
   {
     role: 'Senior Android Consultant',
-    company: 'Wipro Technologies',
+    company: 'Wipro Technologies (MindPool Tech)',
     client: "Bloomingdale's Middle East",
+    location: 'Dubai',
+    period: 'Nov 2021 - Aug 2022',
     highlights: [
       'Built ecommerce features for the Bloomingdale’s Middle East app.',
       'Wishlist',
@@ -98,9 +102,11 @@ export const experience: ExperienceEntry[] = [
     tech: ['Kotlin', 'Java', 'MVVM', 'Retrofit'],
   },
   {
-    role: 'Senior Android Engineer',
-    company: 'IBM',
-    client: 'TSB Bank UK',
+    role: 'Advisory System Analyst - Mobility',
+    company: 'IBM India Pvt Ltd',
+    client: 'TSB Bank (UK)',
+    location: 'Chennai',
+    period: 'Oct 2020 - Jul 2021',
     highlights: [
       'Developed the TSB UK Banking Application.',
       'Biometric Authentication',
@@ -110,9 +116,11 @@ export const experience: ExperienceEntry[] = [
     tech: ['Java', 'Kotlin', 'MVVM', 'REST'],
   },
   {
-    role: 'Senior Android Engineer',
-    company: 'Cognizant',
-    client: 'Rabobank',
+    role: 'Technology Lead - Mobility',
+    company: 'Cognizant Technology Solutions',
+    client: 'Rabobank (Europe)',
+    location: 'Chennai',
+    period: 'Jan 2015 - Oct 2020',
     highlights: ['Payments', 'Cards', 'Account Management', 'Architecture'],
     tech: ['Java', 'Kotlin', 'Architecture'],
   },

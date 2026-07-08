@@ -2,12 +2,13 @@
 
 import { type FormEvent, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, MapPin, Send } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 import { personal } from '@/data/resume';
 
 const contactLinks = [
   { icon: Mail, label: 'Email', value: personal.email, href: `mailto:${personal.email}` },
+  { icon: Phone, label: 'Phone', value: personal.phone, href: `tel:${personal.phone.replace(/\s+/g, '')}` },
   { icon: Linkedin, label: 'LinkedIn', value: 'Connect on LinkedIn', href: personal.linkedin },
   { icon: Github, label: 'GitHub', value: 'View my code', href: personal.github },
   { icon: MapPin, label: 'Location', value: personal.location, href: undefined },
