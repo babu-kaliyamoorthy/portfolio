@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { ArrowLeft } from 'lucide-react';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import { getArticleSlugs, getArticleSource } from '@/lib/articles';
 import type { ArticleFrontmatter } from '@/types/content';
@@ -29,6 +31,14 @@ export default async function ArticlePage({ params }: { params: { slug: string }
 
   return (
     <article>
+      <Link
+        href="/articles"
+        className="group mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
+      >
+        <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+        Back to Technical Articles
+      </Link>
+
       <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary-light">
         {new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
       </p>

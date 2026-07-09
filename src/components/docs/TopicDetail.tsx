@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import type { Topic } from '@/types/content';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
@@ -11,14 +11,24 @@ import CodeBlock from '@/components/docs/CodeBlock';
 export default function TopicDetail({
   topic,
   basePath,
+  backLabel,
   resolveRelated,
 }: {
   topic: Topic;
   basePath: string;
+  backLabel: string;
   resolveRelated?: (slug: string) => Topic | undefined;
 }) {
   return (
     <article>
+      <Link
+        href={basePath}
+        className="group mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
+      >
+        <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+        Back to {backLabel}
+      </Link>
+
       <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary-light">{topic.category}</p>
       <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">{topic.title}</h1>
       <p className="mt-4 max-w-2xl text-foreground/70">{topic.summary}</p>

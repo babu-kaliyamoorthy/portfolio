@@ -17,5 +17,12 @@ export default function SecurityTopicPage({ params }: { params: { topic: string 
   const topic = getSecurityTopic(params.topic);
   if (!topic) notFound();
 
-  return <TopicDetail topic={topic} basePath="/security" resolveRelated={getSecurityTopic} />;
+  return (
+    <TopicDetail
+      topic={topic}
+      basePath="/security"
+      backLabel="Android Security"
+      resolveRelated={getSecurityTopic}
+    />
+  );
 }

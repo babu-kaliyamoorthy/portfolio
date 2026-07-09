@@ -17,5 +17,12 @@ export default function SolidPrinciplePage({ params }: { params: { principle: st
   const topic = getSolidPrinciple(params.principle);
   if (!topic) notFound();
 
-  return <TopicDetail topic={topic} basePath="/solid" resolveRelated={getSolidPrinciple} />;
+  return (
+    <TopicDetail
+      topic={topic}
+      basePath="/solid"
+      backLabel="SOLID Principles"
+      resolveRelated={getSolidPrinciple}
+    />
+  );
 }

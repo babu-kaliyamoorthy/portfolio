@@ -17,5 +17,12 @@ export default function SystemDesignTopicPage({ params }: { params: { topic: str
   const topic = getSystemDesignTopic(params.topic);
   if (!topic) notFound();
 
-  return <TopicDetail topic={topic} basePath="/system-design" resolveRelated={getSystemDesignTopic} />;
+  return (
+    <TopicDetail
+      topic={topic}
+      basePath="/system-design"
+      backLabel="System Design"
+      resolveRelated={getSystemDesignTopic}
+    />
+  );
 }

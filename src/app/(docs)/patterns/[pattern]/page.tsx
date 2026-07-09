@@ -17,5 +17,12 @@ export default function DesignPatternPage({ params }: { params: { pattern: strin
   const topic = getDesignPattern(params.pattern);
   if (!topic) notFound();
 
-  return <TopicDetail topic={topic} basePath="/patterns" resolveRelated={getDesignPattern} />;
+  return (
+    <TopicDetail
+      topic={topic}
+      basePath="/patterns"
+      backLabel="Design Patterns"
+      resolveRelated={getDesignPattern}
+    />
+  );
 }

@@ -17,5 +17,12 @@ export default function LearningTopicPage({ params }: { params: { topic: string 
   const topic = getLearningTopic(params.topic);
   if (!topic) notFound();
 
-  return <TopicDetail topic={topic} basePath="/learn" resolveRelated={getLearningTopic} />;
+  return (
+    <TopicDetail
+      topic={topic}
+      basePath="/learn"
+      backLabel="Android Learning Hub"
+      resolveRelated={getLearningTopic}
+    />
+  );
 }

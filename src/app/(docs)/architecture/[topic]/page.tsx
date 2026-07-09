@@ -17,5 +17,12 @@ export default function ArchitectureTopicPage({ params }: { params: { topic: str
   const topic = getArchitectureTopic(params.topic);
   if (!topic) notFound();
 
-  return <TopicDetail topic={topic} basePath="/architecture" resolveRelated={getArchitectureTopic} />;
+  return (
+    <TopicDetail
+      topic={topic}
+      basePath="/architecture"
+      backLabel="Architecture"
+      resolveRelated={getArchitectureTopic}
+    />
+  );
 }

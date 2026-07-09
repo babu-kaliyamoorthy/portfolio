@@ -17,5 +17,12 @@ export default function PerformanceTopicPage({ params }: { params: { topic: stri
   const topic = getPerformanceTopic(params.topic);
   if (!topic) notFound();
 
-  return <TopicDetail topic={topic} basePath="/performance" resolveRelated={getPerformanceTopic} />;
+  return (
+    <TopicDetail
+      topic={topic}
+      basePath="/performance"
+      backLabel="Android Performance"
+      resolveRelated={getPerformanceTopic}
+    />
+  );
 }
