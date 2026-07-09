@@ -16,7 +16,7 @@ export const personal = {
 export const about = {
   title: 'About Me',
   paragraphs: [
-    'Senior Android Engineer with over 13 years of experience building enterprise-grade Android applications across Banking, FinTech and E-Commerce.',
+    'Senior Android Engineer with 13+ years of experience building enterprise-grade Android applications across Banking, FinTech and E-Commerce.',
     'I specialize in Kotlin, MVVM, Clean Architecture, Jetpack Compose, Coroutines, Flow and modern Android development.',
     'I have successfully delivered business-critical mobile applications for Emirates NBD, Rabobank Netherlands, TSB Bank UK, Mamas & Papas Middle East and other enterprise organizations.',
     'I enjoy solving performance challenges, modularizing large applications and mentoring engineers.',
