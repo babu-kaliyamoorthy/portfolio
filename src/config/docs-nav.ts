@@ -64,6 +64,6 @@ export const docsNav: DocsNavItem[] = [
     label: 'Android Notes',
     href: '/notes',
     description: 'Quick-reference notes across topics',
-    available: false,
+    available: true,
   },
 ];
