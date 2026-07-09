@@ -22,7 +22,7 @@ export const docsNav: DocsNavItem[] = [
     label: 'System Design',
     href: '/system-design',
     description: 'Banking, wallet, payments, offline sync',
-    available: false,
+    available: true,
   },
   {
     label: 'Android Learning Hub',
