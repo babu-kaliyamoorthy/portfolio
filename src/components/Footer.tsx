@@ -4,9 +4,13 @@ import { personal } from '@/data/resume';
 
 const exploreLinks = [
   { label: 'About', href: '/about' },
+  { label: 'Skills', href: '/skills' },
   { label: 'Career', href: '/career' },
+  { label: 'Projects', href: '/projects' },
   { label: 'Architecture', href: '/architecture' },
   { label: 'Articles', href: '/articles' },
+  { label: 'Open Source', href: '/open-source' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Footer() {

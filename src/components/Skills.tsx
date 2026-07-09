@@ -1,7 +1,9 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
+  ArrowRight,
   Blocks,
   Boxes,
   Code2,
@@ -40,6 +42,16 @@ export default function Skills() {
           title="Skills &amp; Technologies"
           description="A comprehensive toolkit built over 13+ years of shipping production Android applications."
         />
+
+        <div className="mt-6 text-center">
+          <Link
+            href="/skills"
+            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-primary-light transition-colors hover:text-primary"
+          >
+            See each skill in depth
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((group, index) => {
