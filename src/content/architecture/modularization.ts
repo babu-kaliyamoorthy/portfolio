@@ -47,7 +47,7 @@ export const modularization: Topic = {
     'Codebases expected to live and grow for years, where build-time and ownership debt compounds',
   ],
   enterpriseExample:
-    "The Emirates NBD Cards module was pulled out of the app-level module into its own :feature:cards module with a small public API (the screens and a navigation entry point), while everything else — ViewModels, use cases, repository implementations — became internal. That single change is what let the Cards team iterate without waiting on unrelated parts of the app to rebuild, and prevented other features from reaching into Cards' internals.",
+    "Pulling a Cards feature out of the app-level module into its own :feature:cards module with a small public API (the screens and a navigation entry point), while everything else — ViewModels, use cases, repository implementations — becomes internal, is a common pattern on large banking apps. It's what lets a Cards team iterate without waiting on unrelated parts of the app to rebuild, and prevents other features from reaching into Cards' internals.",
   codeSnippets: [
     {
       title: 'Module dependency declared with the right visibility',

@@ -44,7 +44,7 @@ export const dependencyInjection: Topic = {
     'Apps with more than a handful of screens, where manual dependency wiring becomes its own maintenance burden',
   ],
   enterpriseExample:
-    "During the Emirates NBD Cards module modularization, each feature module exposed its own Hilt @Module binding its public API, while implementation classes stayed internal to the module. That boundary — enforced by Hilt bindings, not just convention — is what let the Cards module be extracted and rebuilt independently without other modules reaching in and depending on its internals.",
+    "During a Cards module modularization on a banking app, each feature module exposing its own Hilt @Module binding its public API — while implementation classes stay internal to the module — is what turns 'don't reach into another module's internals' from a convention into something Hilt bindings actually enforce, letting a module be extracted and rebuilt independently.",
   codeSnippets: [
     {
       title: 'Constructor injection — no framework code in the class itself',

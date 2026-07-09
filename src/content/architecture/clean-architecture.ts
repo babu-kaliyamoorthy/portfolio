@@ -60,7 +60,7 @@ export const cleanArchitecture: Topic = {
     'Regulated domains (banking, healthcare) where an auditable, provable rule layer matters',
   ],
   enterpriseExample:
-    "On the Emirates NBD Cards module, this layering is what made modularization tractable: the credit-limit-increase and card-application domain logic sat in framework-agnostic modules that the Compose UI and the Retrofit/Room data layer both depended on, but never leaked into. That separation is what let the Cards module be pulled apart and rebuilt without breaking the business rules underneath it.",
+    "On a large banking Cards module, this layering is what makes modularization tractable: keeping credit-limit and card-application domain logic in framework-agnostic modules that the Compose UI and the Retrofit/Room data layer both depend on — but never leak into — is what lets a module like that be pulled apart and rebuilt without breaking the business rules underneath it.",
   codeSnippets: [
     {
       title: 'Domain layer — no Android imports',

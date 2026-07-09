@@ -41,7 +41,7 @@ export const mvvm: Topic = {
     'Screens where the state space is enumerable (loading/error/success/empty) rather than free-form',
   ],
   enterpriseExample:
-    'The Emirates NBD Credit Card Application flow is a multi-step form spanning several screens; each step\'s ViewModel held partial form state as a StateFlow, so backgrounding the app mid-application or rotating the device never lost the customer\'s progress — a real compliance and UX requirement for a banking flow, not just a nicety.',
+    'A multi-step credit card application flow spanning several screens is a common banking pattern; each step\'s ViewModel holding partial form state as a StateFlow means backgrounding the app mid-application or rotating the device never loses the customer\'s progress — a real compliance and UX requirement for a banking flow, not just a nicety.',
   codeSnippets: [
     {
       title: 'ViewModel exposing a single UI state',

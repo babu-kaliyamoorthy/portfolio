@@ -19,13 +19,13 @@ export const skillDetails: Record<string, SkillDetail> = {
   Architecture: {
     definition: 'MVVM, Clean Architecture, the Repository Pattern and Modularization — see the full Architecture hub for depth on each.',
     whyItMatters: "These patterns are what let a banking codebase stay testable and safe to change over 8-10+ years and many engineers, instead of accumulating unmanageable coupling.",
-    realProjectUsage: 'The Emirates NBD Cards module modularization and the MVVM-based mobile solutions at Rabobank Netherlands both relied on these patterns directly.',
+    realProjectUsage: 'Large-scale banking Cards module modularization and MVVM-based mobile banking solutions both rely on these patterns directly.',
     example: 'See Clean Architecture and MVVM under the Architecture section for real code.',
   },
   Jetpack: {
     definition: 'Compose, Navigation, ViewModel, LiveData and Room — the modern first-party Android UI and data toolkit.',
     whyItMatters: 'Jetpack libraries are built and tested against real Android lifecycle edge cases (rotation, process death) that hand-rolled equivalents get wrong far more often.',
-    realProjectUsage: 'Compose UI following MVVM was used to build modern components on the Emirates NBD Cards module.',
+    realProjectUsage: 'Compose UI following MVVM has been used to build modern components on large-scale banking Cards modules.',
     example: 'A ViewModel exposing StateFlow, observed via collectAsStateWithLifecycle() in a Composable — see MVVM under Architecture.',
   },
   Networking: {
@@ -37,13 +37,13 @@ export const skillDetails: Record<string, SkillDetail> = {
   Async: {
     definition: 'Kotlin Coroutines and Flow as the primary async model, with RxJava on older codebases predating the Coroutines migration.',
     whyItMatters: 'Structured concurrency (see Coroutines under the Learning Hub) is what prevents background work from leaking past the screen that started it.',
-    realProjectUsage: 'Coroutines and Flow powered reactive, asynchronous flows on the Emirates NBD Cards module; RxJava was the async model on the TSB Bank UK and Rabobank Netherlands engagements.',
+    realProjectUsage: 'Coroutines and Flow power reactive, asynchronous flows on modern banking Cards modules; RxJava was the async model on the TSB Bank UK and Rabobank Netherlands engagements.',
     example: 'viewModelScope.launch { } tied to the ViewModel\'s lifecycle — cancels automatically, no manual bookkeeping.',
   },
   'Dependency Injection': {
     definition: 'Hilt as the primary DI framework, built on Dagger.',
     whyItMatters: 'Constructor injection makes every class swappable in a test — a fake repository can replace the real one with zero changes to the class under test.',
-    realProjectUsage: 'Hilt was applied on the Emirates NBD Cards module specifically to enhance modularity and maintainability during the modularization effort.',
+    realProjectUsage: 'Hilt is commonly applied on large banking Cards modules specifically to enhance modularity and maintainability during a modularization effort.',
     example: 'See Dependency Injection (Hilt) under Architecture for the full scoping and constructor-injection walkthrough.',
   },
   Testing: {
@@ -55,12 +55,12 @@ export const skillDetails: Record<string, SkillDetail> = {
   'CI/CD': {
     definition: 'Jenkins-based pipelines, Git for version control, SonarQube for static code quality gates.',
     whyItMatters: 'A CI gate that runs tests and static analysis on every PR catches regressions before they reach a release build, not after.',
-    realProjectUsage: 'Contributed directly to CI/CD workflows and automated testing strategies on the Emirates NBD Cards module.',
+    realProjectUsage: 'CI/CD workflows and automated testing strategies are a core part of shipping a banking Cards module reliably at a fast pace.',
     example: 'A SonarQube quality gate blocking merge on new code smells or a coverage regression, enforced as part of the PR pipeline.',
   },
   Tools: {
     definition: 'Jira for planning and tracking, Postman for API testing, Firebase for crash reporting and remote config, Android Studio as the primary IDE.',
-    whyItMatters: 'Firebase Crashlytics is what actually surfaces production crash-free rate — the metric behind the 95% → 98% improvement on the Emirates NBD engagement.',
+    whyItMatters: 'Firebase Crashlytics is what actually surfaces production crash-free rate — the metric behind the 95% → 98% improvement described in Achievements.',
     realProjectUsage: 'Used day-to-day across every banking engagement for planning (Jira), API verification before client integration (Postman), and production monitoring (Firebase).',
     example: 'A Crashlytics dashboard segmented by app version, used to confirm a crash-free rate improvement actually held after a release, not just in the sprint it shipped.',
   },
