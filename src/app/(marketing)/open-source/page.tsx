@@ -2,9 +2,12 @@ import type { Metadata } from 'next';
 import { Star } from 'lucide-react';
 import { personal } from '@/data/resume';
 import { getPublicRepos } from '@/lib/github';
+import { ecosystemRepos } from '@/data/ecosystem-repos';
+import EcosystemRepoCard from '@/components/EcosystemRepoCard';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 
 export const metadata: Metadata = {
   title: 'Open Source',
@@ -19,9 +22,24 @@ export default async function OpenSourcePage() {
     <div className="section-padding">
       <div className="container-narrow max-w-3xl">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary-light">Open Source</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Public Repositories</h1>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">The Android Architect Ecosystem</h1>
         <p className="mt-4 text-foreground/70">
-          Live from GitHub — pulled directly from the GitHub API at build time, not hand-maintained.
+          A growing set of repositories built alongside this portfolio — each one real, working code, not just
+          a description. Repos still in progress show their status; click through once they&apos;re live.
+        </p>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          {ecosystemRepos.map((repo) => (
+            <EcosystemRepoCard key={repo.name} repo={repo} />
+          ))}
+        </div>
+
+        <Separator className="my-14" />
+
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-primary-light">All Repositories</p>
+        <h2 className="mt-3 text-2xl font-bold tracking-tight">Live from GitHub</h2>
+        <p className="mt-4 text-foreground/70">
+          Pulled directly from the GitHub API at build time, not hand-maintained.
         </p>
 
         {repos.length === 0 ? (
