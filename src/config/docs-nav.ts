@@ -40,13 +40,13 @@ export const docsNav: DocsNavItem[] = [
     label: 'Android Security',
     href: '/security',
     description: 'SSL pinning, OAuth, biometrics, encrypted storage',
-    available: false,
+    available: true,
   },
   {
     label: 'Android Performance',
     href: '/performance',
     description: 'ANRs, memory leaks, startup time, baseline profiles',
-    available: false,
+    available: true,
   },
   {
     label: 'Design Patterns',
