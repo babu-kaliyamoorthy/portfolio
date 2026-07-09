@@ -28,7 +28,7 @@ export const docsNav: DocsNavItem[] = [
     label: 'Android Learning Hub',
     href: '/learn',
     description: 'Kotlin, Compose, Coroutines, Flow, Room',
-    available: false,
+    available: true,
   },
   {
     label: 'Interview Preparation',
