@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { navLinks, personal } from '@/data/resume';
@@ -8,9 +10,16 @@ import ThemeToggle from '@/components/ThemeToggle';
 import { cn } from '@/lib/utils';
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#home');
+
+  // On Home, links are pure in-page anchors (#skills). On every other page
+  // (About, Career, ...) those section ids don't exist, so navigate back to
+  // Home first via a real Link and let the hash scroll on arrival.
+  const resolveHref = (hash: string) => (isHome ? hash : `/${hash}`);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -20,6 +29,8 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (!isHome) return;
+
     const sections = navLinks
       .map((link) => document.querySelector(link.href))
       .filter((el): el is Element => Boolean(el));
@@ -37,7 +48,7 @@ export default function Navbar() {
 
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
-  }, []);
+  }, [isHome]);
 
   return (
     <header
@@ -47,23 +58,23 @@ export default function Navbar() {
       )}
     >
       <nav className="container-narrow flex items-center justify-between px-6 py-4 sm:px-10 lg:px-16">
-        <a href="#home" className="font-mono text-lg font-bold tracking-tight text-foreground">
+        <Link href={resolveHref('#home')} className="font-mono text-lg font-bold tracking-tight text-foreground">
           <span className="text-primary-light">&lt;</span>
           {personal.name.split(' ')[0]}
           <span className="text-secondary">/&gt;</span>
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
+              <Link
+                href={resolveHref(link.href)}
                 className={cn(
                   'relative rounded-full px-4 py-2 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground',
-                  activeSection === link.href && 'text-foreground',
+                  isHome && activeSection === link.href && 'text-foreground',
                 )}
               >
-                {activeSection === link.href && (
+                {isHome && activeSection === link.href && (
                   <motion.span
                     layoutId="nav-active"
                     className="absolute inset-0 rounded-full bg-foreground/10"
@@ -71,19 +82,19 @@ export default function Navbar() {
                   />
                 )}
                 <span className="relative">{link.label}</span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
-          <a
-            href="#contact"
+          <Link
+            href={resolveHref('#contact')}
             className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white shadow-glow transition-transform hover:scale-[1.03] active:scale-95"
           >
             Hire Me
-          </a>
+          </Link>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
@@ -112,23 +123,23 @@ export default function Navbar() {
             <ul className="flex flex-col gap-1 px-6 py-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
+                  <Link
+                    href={resolveHref(link.href)}
                     onClick={() => setOpen(false)}
                     className="block rounded-lg px-3 py-3 text-base font-medium text-foreground/80 hover:bg-foreground/5 hover:text-foreground"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
-                <a
-                  href="#contact"
+                <Link
+                  href={resolveHref('#contact')}
                   onClick={() => setOpen(false)}
                   className="mt-2 block rounded-lg bg-primary px-3 py-3 text-center text-base font-semibold text-white"
                 >
                   Hire Me
-                </a>
+                </Link>
               </li>
             </ul>
           </motion.div>
