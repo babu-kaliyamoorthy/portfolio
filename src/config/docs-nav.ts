@@ -34,7 +34,7 @@ export const docsNav: DocsNavItem[] = [
     label: 'Interview Preparation',
     href: '/interview-prep',
     description: 'Senior, lead and architect-level Q&A',
-    available: false,
+    available: true,
   },
   {
     label: 'Android Security',
@@ -52,13 +52,13 @@ export const docsNav: DocsNavItem[] = [
     label: 'Design Patterns',
     href: '/patterns',
     description: 'Builder, Factory, Observer, Strategy and more',
-    available: false,
+    available: true,
   },
   {
     label: 'SOLID Principles',
     href: '/solid',
     description: 'Each principle with real Android examples',
-    available: false,
+    available: true,
   },
   {
     label: 'Android Notes',
