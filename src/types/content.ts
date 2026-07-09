@@ -34,6 +34,7 @@ export type Topic = {
   codeSnippets?: CodeSnippet[];
   interviewQuestions?: InterviewQuestion[];
   tech?: string[];
+  relatedSlugs?: string[];
 };
 
 export type ArticleFrontmatter = {

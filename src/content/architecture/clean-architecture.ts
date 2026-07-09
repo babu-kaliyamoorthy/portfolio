@@ -113,4 +113,5 @@ class CardRepositoryImpl(
     },
   ],
   tech: ['Kotlin', 'Coroutines', 'Hilt', 'Retrofit', 'Room'],
+  relatedSlugs: ['mvvm', 'dependency-injection'],
 };

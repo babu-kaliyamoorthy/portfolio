@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { ArrowRight } from 'lucide-react';
 import { getArchitectureTopic, getArchitectureSlugs } from '@/content/architecture';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
@@ -148,6 +150,31 @@ export default function ArchitectureTopicPage({ params }: { params: { topic: str
                 </AccordionItem>
               ))}
             </Accordion>
+          </section>
+        </>
+      )}
+
+      {topic.relatedSlugs && topic.relatedSlugs.length > 0 && (
+        <>
+          <Separator className="my-10" />
+          <section>
+            <h2 className="text-xl font-semibold text-foreground">Related topics</h2>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {topic.relatedSlugs.map((slug) => {
+                const related = getArchitectureTopic(slug);
+                if (!related) return null;
+                return (
+                  <Link
+                    key={slug}
+                    href={`/architecture/${slug}`}
+                    className="group flex items-center gap-2 rounded-full border border-foreground/10 px-4 py-2 text-sm font-medium text-foreground/70 transition-colors hover:border-primary/40 hover:text-foreground"
+                  >
+                    {related.title}
+                    <ArrowRight className="h-3.5 w-3.5 text-foreground/30 transition-transform group-hover:translate-x-1 group-hover:text-primary-light" />
+                  </Link>
+                );
+              })}
+            </div>
           </section>
         </>
       )}
