@@ -1,7 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Briefcase, MapPin } from 'lucide-react';
+import { ArrowRight, Briefcase, MapPin } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 import { experience } from '@/data/resume';
 
@@ -14,6 +15,16 @@ export default function Experience() {
           title="Professional Experience"
           description="13+ years delivering enterprise Android applications for global banking and retail brands."
         />
+
+        <div className="mt-6 text-center">
+          <Link
+            href="/career"
+            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-primary-light transition-colors hover:text-primary"
+          >
+            View full career timeline
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
 
         <div className="relative mt-16">
           <div className="absolute left-[19px] top-2 h-full w-px bg-gradient-to-b from-primary via-foreground/10 to-transparent sm:left-1/2 sm:-translate-x-1/2" />

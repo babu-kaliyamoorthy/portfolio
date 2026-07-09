@@ -1,7 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Building2, Code2, Sparkles } from 'lucide-react';
+import { ArrowRight, Building2, Code2, Sparkles } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 import { about } from '@/data/resume';
 
@@ -61,6 +62,14 @@ export default function About() {
                 {paragraph}
               </p>
             ))}
+
+            <Link
+              href="/about"
+              className="group inline-flex items-center gap-1.5 text-sm font-semibold text-primary-light transition-colors hover:text-primary"
+            >
+              Read the full story
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </motion.div>
         </div>
       </div>
