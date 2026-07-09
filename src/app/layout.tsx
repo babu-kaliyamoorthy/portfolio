@@ -2,10 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import ScrollProgress from '@/components/ScrollProgress';
-import BackToTop from '@/components/BackToTop';
 import { personal } from '@/data/resume';
 import { withBasePath } from '@/lib/utils';
 
@@ -120,11 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} bg-background font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
-          <ScrollProgress />
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <BackToTop />
+          {children}
         </ThemeProvider>
       </body>
     </html>

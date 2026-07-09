@@ -79,6 +79,40 @@ body {
   }
 }
 
+@layer components {
+  .mdx-content > * + * {
+    margin-top: 1.25rem;
+  }
+
+  .mdx-content h2 {
+    @apply mb-2 mt-12 text-2xl font-semibold text-foreground;
+  }
+
+  .mdx-content h3 {
+    @apply mb-2 mt-8 text-xl font-semibold text-foreground;
+  }
+
+  .mdx-content ul {
+    @apply list-disc space-y-2 pl-6 text-foreground/70;
+  }
+
+  .mdx-content li {
+    @apply leading-relaxed;
+  }
+
+  .mdx-content a {
+    @apply text-primary-light underline underline-offset-4 transition-colors hover:text-primary;
+  }
+
+  .mdx-content strong {
+    @apply font-semibold text-foreground;
+  }
+
+  .mdx-content code:not(pre code) {
+    @apply rounded bg-foreground/10 px-1.5 py-0.5 font-mono text-[0.85em] text-foreground;
+  }
+}
+
 @layer base {
   h1,
   h2,
