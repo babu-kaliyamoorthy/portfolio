@@ -1,12 +1,32 @@
+import Link from 'next/link';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { personal } from '@/data/resume';
+
+const exploreLinks = [
+  { label: 'About', href: '/about' },
+  { label: 'Career', href: '/career' },
+  { label: 'Architecture', href: '/architecture' },
+  { label: 'Articles', href: '/articles' },
+];
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-foreground/5 px-6 py-10 sm:px-10 lg:px-16">
-      <div className="container-narrow flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+      <div className="container-narrow flex flex-wrap items-center justify-center gap-x-6 gap-y-2 border-b border-foreground/5 pb-8 sm:justify-start">
+        {exploreLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="text-sm font-medium text-foreground/60 transition-colors hover:text-foreground"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+
+      <div className="container-narrow mt-8 flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
         <p className="text-center text-sm text-foreground/50 sm:text-left">
           &copy; {year} {personal.name}. All rights reserved.
         </p>
