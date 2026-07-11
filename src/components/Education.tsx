@@ -26,6 +26,13 @@ export default function Education() {
                 <GraduationCap className="h-6 w-6" />
               </div>
               <h3 className="text-base font-semibold text-foreground sm:text-lg">{entry.degree}</h3>
+              {(entry.institution || entry.year) && (
+                <p className="text-sm text-foreground/60">
+                  {entry.institution}
+                  {entry.institution && entry.year ? ' · ' : ''}
+                  {entry.year}
+                </p>
+              )}
             </motion.div>
           ))}
         </div>

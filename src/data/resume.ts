@@ -6,7 +6,7 @@ export const personal = {
     'Building secure, scalable and high-performance Android applications for Banking, FinTech and Enterprise products.',
   location: 'Dubai, UAE',
   email: 'babukb12@gmail.com',
-  phone: '+971 553181568',
+  phone: '+971 55 318 1568',
   linkedin: 'https://www.linkedin.com/in/babu-kaliyamoorthy/',
   github: 'https://github.com/babu-kaliyamoorthy',
   resumeFile: '/resume.pdf',
@@ -16,10 +16,10 @@ export const personal = {
 export const about = {
   title: 'About Me',
   paragraphs: [
-    'Senior Android Engineer with 13+ years of experience building enterprise-grade Android applications across Banking, FinTech and E-Commerce.',
-    'I specialize in Kotlin, MVVM, Clean Architecture, Jetpack Compose, Coroutines, Flow and modern Android development.',
-    'I have successfully delivered business-critical mobile applications for Emirates NBD, Rabobank Netherlands, TSB Bank UK, Mamas & Papas Middle East and other enterprise organizations.',
-    'I enjoy solving performance challenges, modularizing large applications and mentoring engineers.',
+    'Senior Android Engineer with 13+ years of experience building secure, high-performance mobile banking applications, including 3+ years of hands-on UAE banking experience delivering the Emirates NBD (ENBD X) digital banking platform.',
+    'Deep expertise in Kotlin, Jetpack Compose, MVVM, and Clean Architecture, with a track record of leading module modularization, improving app stability, and shipping critical banking journeys such as Credit Card Application and Credit Limit Increase.',
+    'Combines strong individual-contributor engineering with technical leadership — mentoring developers, driving architecture decisions, and partnering with cross-functional teams — while consistently improving reliability, performance, and customer experience for large-scale digital banking platforms serving millions of users.',
+    'Proven background across Emirates NBD (UAE), Rabobank (Netherlands), and TSB Bank (UK), with specialized focus on payments, authentication, biometrics, and secure banking transaction flows.',
   ],
 };
 
@@ -47,14 +47,26 @@ export type SkillCategory = {
 
 export const skills: SkillCategory[] = [
   { category: 'Languages', skills: ['Kotlin', 'Java'] },
-  { category: 'Architecture', skills: ['MVVM', 'Clean Architecture', 'Repository Pattern', 'Modularization'] },
-  { category: 'Jetpack', skills: ['Compose', 'Navigation', 'ViewModel', 'LiveData', 'Room'] },
-  { category: 'Networking', skills: ['Retrofit', 'REST', 'JSON', 'OkHttp'] },
-  { category: 'Async', skills: ['Coroutines', 'Flow', 'RxJava'] },
+  {
+    category: 'Android Development',
+    skills: ['Android SDK', 'Jetpack Compose', 'XML UI', 'Material Design', 'Navigation Components', 'Android Lifecycle Components'],
+  },
+  {
+    category: 'Architecture & Design',
+    skills: ['MVVM', 'Clean Architecture', 'Repository Pattern', 'SOLID Principles', 'Modularization', 'Design Patterns'],
+  },
+  { category: 'Concurrency & Reactive Programming', skills: ['Kotlin Coroutines', 'Flow', 'StateFlow', 'RxJava'] },
+  { category: 'Networking & Storage', skills: ['REST APIs', 'Retrofit', 'JSON', 'Room Database', 'SQLite', 'Local Caching'] },
   { category: 'Dependency Injection', skills: ['Hilt', 'Dagger'] },
-  { category: 'Testing', skills: ['JUnit', 'Espresso'] },
-  { category: 'CI/CD', skills: ['Jenkins', 'Git', 'SonarQube'] },
-  { category: 'Tools', skills: ['Jira', 'Postman', 'Firebase', 'Android Studio'] },
+  {
+    category: 'Testing & Quality Engineering',
+    skills: ['JUnit', 'Espresso', 'Firebase Crashlytics', 'SonarQube', 'Lint', 'Code Reviews'],
+  },
+  { category: 'DevOps & Tools', skills: ['CI/CD', 'Jenkins', 'Git', 'Jira', 'Postman', 'Agile / Scrum'] },
+  {
+    category: 'Domain Expertise',
+    skills: ['Digital Banking', 'Payments', 'Authentication', 'Biometrics', 'Credit Card & Credit Limit Workflows', 'Enterprise Mobile Applications'],
+  },
 ];
 
 export type ExperienceEntry = {
@@ -69,39 +81,34 @@ export type ExperienceEntry = {
 
 export const experience: ExperienceEntry[] = [
   {
-    role: 'Senior Software Engineer',
+    role: 'Senior Software Engineer (Android)',
     company: 'Emirates NBD (via Servion Global Solutions)',
-    location: 'Dubai',
+    location: 'Dubai, UAE',
     period: 'Sep 2022 - Present',
     highlights: [
-      'Designed and developed Kotlin-based features for the ENBD X mobile banking application supporting a large active user base.',
-      'Built modern UI components using Jetpack Compose following MVVM and Clean Architecture principles.',
-      'Implemented reactive and asynchronous flows using Kotlin Coroutines and Flow.',
-      'Integrated backend services via secure REST APIs using Retrofit.',
-      'Applied Hilt dependency injection to enhance modularity and maintainability.',
-      'Improved application stability through memory management and lifecycle optimizations.',
-      'Conducted peer code reviews ensuring adherence to banking security and quality standards.',
-      'Collaborated with cross-functional teams and stakeholders for feature delivery and urgent issue resolution.',
-      'Mentored junior engineers, improving development efficiency and code quality.',
-      'Contributed to CI/CD workflows and automated testing strategies.',
+      "Designed and delivered end-to-end Credit Card Application and Credit Limit Increase journeys using Kotlin, Jetpack Compose, and Clean Architecture, enabling customers to self-serve two of the bank's highest-traffic digital requests.",
+      'Led the modularization of the Cards module within the ENBD X banking application, restructuring the codebase into independent modules that reduced build times and enabled multiple teams to develop features in parallel.',
+      'Increased crash-free users from 95% to 98% by proactively debugging production issues, performing root cause analysis, and shipping targeted stability and performance fixes.',
+      'Built asynchronous, reactive data flows using Kotlin Coroutines and Flow to handle real-time account, payment, and transaction data with improved responsiveness.',
+      'Implemented Hilt-based dependency injection across feature modules, improving testability and reducing boilerplate for a growing engineering team.',
+      'Delivered secure banking features covering payments, fund transfers, authentication, and account management in line with banking security and compliance standards.',
+      'Owned production support for critical banking flows, performing RCA on live incidents and delivering hotfix releases with minimal customer disruption.',
+      'Mentored junior and mid-level Android developers through code reviews and architecture discussions, raising overall code quality and consistency across the Cards team.',
     ],
-    tech: ['Kotlin', 'Compose', 'MVVM', 'Hilt', 'Coroutines', 'Flow', 'Retrofit'],
+    tech: ['Kotlin', 'Java', 'Jetpack Compose', 'MVVM', 'Clean Architecture', 'Hilt', 'Coroutines', 'Flow', 'Retrofit', 'Firebase Crashlytics', 'Jenkins', 'Git'],
   },
   {
-    role: 'Senior Android Consultant - Mobility',
+    role: 'Senior Android Consultant',
     company: 'Wipro Technologies (MindPool Tech)',
-    client: 'Mamas & Papas Middle East',
-    location: 'Dubai',
+    client: "Bloomingdale's Middle East",
+    location: 'Dubai, UAE',
     period: 'Nov 2021 - Aug 2022',
     highlights: [
-      'Developed and maintained Android applications using Kotlin and Android SDK.',
-      'Delivered production enhancements and resolved critical defects for enterprise mobile platforms.',
-      'Performed unit testing to ensure functional correctness and reliability.',
-      'Collaborated directly with clients for requirement analysis and technical clarifications.',
-      'Conducted code reviews and promoted best engineering practices.',
-      'Guided junior developers on debugging, architecture, and performance considerations.',
+      "Built core commerce features — product catalogue, search, wishlist, cart, and secure checkout/payment flows — for Bloomingdale's Middle East, a high-traffic regional e-commerce application.",
+      'Improved UI rendering performance and application responsiveness, reducing perceived load times across key shopping screens.',
+      'Partnered with backend, product, and design teams to deliver features end-to-end within an Agile delivery model.',
     ],
-    tech: ['Kotlin', 'Android SDK', 'Unit Testing'],
+    tech: ['Kotlin', 'Java', 'Android SDK', 'REST APIs', 'Agile', 'Git'],
   },
   {
     role: 'Advisory System Analyst - Mobility',
@@ -110,11 +117,8 @@ export const experience: ExperienceEntry[] = [
     location: 'Chennai',
     period: 'Oct 2020 - Jul 2021',
     highlights: [
-      'Contributed to the TSB UK mobile banking application delivering feature enhancements.',
-      'Implemented secure login and biometric authentication mechanisms.',
-      'Utilized Kotlin, RxJava, Retrofit, REST APIs, and XML UI.',
-      'Ensured code quality via SonarQube, Lint, and comprehensive unit testing.',
-      'Collaborated with distributed Agile teams and global stakeholders.',
+      'Delivered mobile banking features for TSB Bank (UK), including account management, fund transfers, bill payments, and transaction tracking.',
+      'Integrated biometric authentication to strengthen secure customer login and transaction approval flows.',
     ],
     tech: ['Kotlin', 'RxJava', 'Retrofit', 'REST', 'XML'],
   },
@@ -125,52 +129,63 @@ export const experience: ExperienceEntry[] = [
     location: 'Chennai',
     period: 'Jan 2015 - Oct 2020',
     highlights: [
-      'Led Android development initiatives for international banking clients including Rabobank Netherlands.',
-      'Designed scalable mobile solutions using Kotlin, RxJava, MVVM, and RESTful integrations.',
-      'Optimized API communication through efficient Retrofit implementations.',
-      'Improved application performance and responsiveness.',
-      'Mentored developers and enforced architectural and code quality standards.',
-      'Coordinated cross-functional teams within Agile delivery environments.',
+      "Led Android development for Rabobank's digital banking applications across Europe, owning the full feature lifecycle from requirements through production release.",
+      'Delivered secure banking capabilities spanning payments, fund transfers, account management, and card services.',
+      'Mentored developers and shaped technical decisions and coding standards across the mobile engineering team.',
     ],
     tech: ['Kotlin', 'RxJava', 'MVVM', 'Retrofit'],
+  },
+  {
+    role: 'Android Developer',
+    company: 'Suhasoft Pvt Ltd | LIV Pvt Ltd',
+    location: 'Chennai',
+    period: 'Feb 2013 - Dec 2014',
+    highlights: [
+      'Built native Android applications and reusable UI components across consumer-facing mobile products, establishing the engineering foundation for later banking and fintech work.',
+    ],
+    tech: ['Java', 'Android SDK', 'XML UI'],
   },
 ];
 
 export type EducationEntry = {
   degree: string;
+  institution?: string;
+  year?: string;
 };
 
 export const education: EducationEntry[] = [
-  { degree: 'Master of Computer Applications' },
-  { degree: 'Bachelor of Science' },
+  { degree: 'Master of Computer Application (MCA)', institution: 'Anna University, Coimbatore', year: '2011' },
+  { degree: 'Bachelor of Science (Physics)', institution: 'Bharathidasan University, Trichy', year: '2008' },
 ];
 
 export type Achievement = {
   title: string;
   description: string;
-  icon: 'trend' | 'feature' | 'modularization' | 'mentor';
+  icon: 'trend' | 'feature' | 'modularization' | 'mentor' | 'recognition';
 };
 
 export const achievements: Achievement[] = [
   {
-    title: 'Increased Crash-Free Users',
-    description: 'Improved crash-free user rate from 95% to 98% through rigorous RCA and performance optimization.',
+    title: 'Improved Crash-Free Users',
+    description:
+      'Improved crash-free user rate from 95% to 98% on a large-scale digital banking application through systematic production debugging and performance optimization.',
     icon: 'trend',
   },
   {
-    title: 'Owned End-to-End Features',
-    description: 'Owned business-critical banking flows end-to-end, from design through production rollout.',
-    icon: 'feature',
-  },
-  {
-    title: 'Led Modularization',
-    description: 'Led modularization of a large-scale Cards module to improve build times and team velocity.',
+    title: 'Led Cards Modularization',
+    description: 'Led Cards module modularization on ENBD X, improving scalability, build performance, and cross-team engineering velocity.',
     icon: 'modularization',
   },
   {
-    title: 'Mentored Developers',
-    description: 'Mentored junior and mid-level engineers on Android architecture and best practices.',
-    icon: 'mentor',
+    title: 'Delivered Core Banking Journeys',
+    description:
+      "Delivered two of the bank's core digital self-service journeys — Credit Card Application and Credit Limit Increase — from design through production.",
+    icon: 'feature',
+  },
+  {
+    title: 'Recognized for Excellence',
+    description: 'Recognized with multiple performance awards across Emirates NBD, Wipro, and Cognizant for technical contribution and delivery excellence.',
+    icon: 'recognition',
   },
 ];
 
@@ -192,12 +207,10 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  { name: 'ENBD X', description: 'Emirates NBD Mobile Banking Application' },
+  { name: 'ENBD X', description: 'Emirates NBD Digital Banking Application (UAE)' },
   { name: 'TSB Bank UK', description: 'Mobile Banking Platform' },
-  { name: 'Rabobank Netherlands', description: 'Digital Banking App' },
-  { name: 'British Gas UK', description: 'Enterprise Mobile App' },
-  { name: 'Mamas & Papas Middle East', description: 'E-commerce App' },
-  { name: 'Pearson eText', description: 'Education Platform' },
+  { name: 'Rabobank Netherlands', description: 'Digital Banking Application' },
+  { name: "Bloomingdale's Middle East", description: 'E-commerce Application' },
 ];
 
 export type WhyHireMeItem = {

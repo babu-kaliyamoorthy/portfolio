@@ -29,8 +29,8 @@ export const projectEnrichment: Record<string, ProjectEnrichment> = {
     tech: ['Kotlin', 'RxJava', 'MVVM', 'Retrofit'],
     relatedDocs: [{ label: 'MVVM', href: '/architecture/mvvm' }],
   },
-  'Mamas & Papas Middle East': {
-    tech: ['Kotlin', 'Android SDK', 'Unit Testing'],
+  "Bloomingdale's Middle East": {
+    tech: ['Kotlin', 'Java', 'Android SDK', 'REST APIs'],
     relatedDocs: [{ label: 'Testing on Android', href: '/learn/testing' }],
   },
 };

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Boxes, TrendingUp, UserCheck, Workflow, type LucideIcon } from 'lucide-react';
+import { Award, Boxes, TrendingUp, UserCheck, Workflow, type LucideIcon } from 'lucide-react';
 import SectionHeading from '@/components/SectionHeading';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import { achievements, type Achievement } from '@/data/resume';
@@ -11,6 +11,7 @@ const iconMap: Record<Achievement['icon'], LucideIcon> = {
   feature: Workflow,
   modularization: Boxes,
   mentor: UserCheck,
+  recognition: Award,
 };
 
 export default function Achievements() {

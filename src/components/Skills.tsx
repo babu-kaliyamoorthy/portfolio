@@ -9,10 +9,10 @@ import {
   Code2,
   FlaskConical,
   GitMerge,
+  Landmark,
   Layers,
   Network,
   Syringe,
-  Wrench,
   Zap,
   type LucideIcon,
 } from 'lucide-react';
@@ -21,14 +21,14 @@ import { skills } from '@/data/resume';
 
 const categoryIcons: Record<string, LucideIcon> = {
   Languages: Code2,
-  Architecture: Layers,
-  Jetpack: Blocks,
-  Networking: Network,
-  Async: Zap,
+  'Android Development': Blocks,
+  'Architecture & Design': Layers,
+  'Concurrency & Reactive Programming': Zap,
+  'Networking & Storage': Network,
   'Dependency Injection': Syringe,
-  Testing: FlaskConical,
-  'CI/CD': GitMerge,
-  Tools: Wrench,
+  'Testing & Quality Engineering': FlaskConical,
+  'DevOps & Tools': GitMerge,
+  'Domain Expertise': Landmark,
 };
 
 export default function Skills() {
