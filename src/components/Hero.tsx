@@ -58,7 +58,7 @@ export default function Hero() {
           <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href={withBasePath(personal.resumeFile)}
-              download="Babu_Kaliyamoorthy_Resume.pdf"
+              download="Babu_Kaliyamoorthy_Resume.docx"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-glow transition-transform hover:scale-[1.03] active:scale-95"
             >
               <Download className="h-4 w-4 transition-transform group-hover:-translate-y-0.5" />

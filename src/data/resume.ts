@@ -9,7 +9,7 @@ export const personal = {
   phone: '+971 55 318 1568',
   linkedin: 'https://www.linkedin.com/in/babu-kaliyamoorthy/',
   github: 'https://github.com/babu-kaliyamoorthy',
-  resumeFile: '/resume.pdf',
+  resumeFile: '/resume.docx',
   roles: ['Senior Android Engineer', 'Kotlin Developer', 'Jetpack Compose Specialist', 'Android Architect'],
 };
 
