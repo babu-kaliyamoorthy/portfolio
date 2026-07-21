@@ -37,7 +37,7 @@ export const stats: Stat[] = [
   { value: '8', suffix: '+', label: 'Companies' },
   { value: 'Millions', label: 'Users Served' },
   { value: '95', suffix: '%', label: 'Crash Free Users', isRange: true, rangeFrom: '95%', rangeTo: '98%' },
-  { value: '100', suffix: '+', label: 'Features Delivered' },
+  { value: '30', suffix: '+', label: 'Features Delivered' },
 ];
 
 export type SkillCategory = {
